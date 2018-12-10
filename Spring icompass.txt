@@ -1,0 +1,619 @@
+ 1.Which of the given option represents loose coupling?
+1). public class Person
+{
+private Address address;
+public Person()
+{
+this.address = new Address();
+}
+}
+2). public class Person
+{
+private Address address;
+public Person(Address address)
+{
+this.address = address; 
+}
+}
+3). Both 0 and 1
+4). none of the above
+Solution :
+option [2] is correct
+
+
+
+2.. Which of the given below are the layers of Spring IO platform? 
+1). byName
+2). byType
+3). byId
+4). autodetect
+Solution :
+option [3] is correct
+
+3. Which of the given options are implementation of BeanFactory?
+1). XMLBeanFactory
+2). DefaultListableBeanFactory
+3). JNDIBeanFactory
+4). StaticBeanFactory
+Solution :
+option [1,2] are correct
+
+
+4.Which element in the spring configuration file is used to tell the Spring container about a class and how it should be configured.            
+1). <bean>
+2). <id>
+3). <class>
+4). <beans>
+Solution :
+option [1] is correct
+
+5.. Look at the bean below. 
+
+public class ExampleBean {
+
+    private int years;             
+    private String ultimateAnswer;
+
+    public ExampleBean(int years, String ultimateAnswer) {
+        this.years = years;
+        this.ultimateAnswer = ultimateAnswer;
+    }
+}
+
+What would be the value of index, to instantiate the bean using constructor injection?
+
+<bean id="exampleBean" class="examples.ExampleBean">
+  <constructor-arg index="_____"><value>7500000</value></constructor-arg>
+  <constructor-arg index="_____"><value>42</value></constructor-arg>
+</bean>
+1). '0 and 1
+2). '1 and 2
+3). Start-index value does not matter
+4). There is no attribute called index with the <constructor-arg> element
+Solution :
+option [1] is correct
+
+6.<bean id="currencyConverter" class="training.Spring.CurrencyConverterImpl">
+ <property name="exchangeRate" value="44.50" /></bean>
+Which type of dependency injection is used in above code?
+1). Setter Injection
+2). Constructor Injection
+3). Interface Injection
+4). No dependency injection is used
+Solution :
+option [1] is correct
+
+
+7. Which of the given statement is true about spring boot?
+1). Dynamically wires up beans
+2). No requirement of XML configuration
+3). Increases the size of build file
+4). Increases the boiler plate code
+Solution :
+option [1,2] are correct
+
+8.<bean id="datasource" class="com.spring.ConnectionDataSource">
+ <property name="url"><value>${url}</value></property>
+ <property name="driver"><value>${driver}</value></property>
+ <property name="username"><value>${username}</value></property>
+ <property name="password"><value>${password}</value></property>
+</bean>
+
+<bean id="placeHolderConfig" 
+class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+ <property name="_______"><value>_________</value></property>
+</bean>
+
+What must go into the blanks?
+1). '1-base 2-properties
+2). 1-location 2-properties file name
+3). '1-resource 2-properties file name
+4). 1-location 2-property
+Solution :
+option [2] is correct
+
+9.Which implementation of 'Application Context' loads context definition from an XML file contained within a web application           
+1). ClassPathXmlApplicationContext
+2). FileSystemXmlApplicationContext
+3). XmlWebApplicationContext
+4). none of the above
+Solution :
+option [3] is correct
+
+10.Which of the given below are the layers of Spring IO platform? 
+1). Execution
+2). Foundation
+3). Co-ordination
+4). All of the above
+Solution :
+option [4] is correct
+
+11. Consider the following SpEL expression:
+
+<property name=“smallCities" value="#{cities.?[population lt 100000]}"/> 
+
+Which of the folloing statements are correct about this code?(Assume that cities is a list that exists)           
+1). This example uses a projection operator
+2). This example uses a selection operator
+3). It retrieves list of cities whose population is less than 100,000
+4). The "smallCities" property will be wired with list of cities objects
+Solution :
+option [2,3,4] are correct
+
+12. <util:list id="cities">
+    <bean class=“trg.spring.City"
+         p:name="Chicago" p:state="IL" p:population="2853114"/>
+    <bean class=" trg.spring.City"
+         p:name="Atlanta" p:state="GA" p:population="537958"/>
+     <bean class=" trg.spring.City"
+          p:name="Dallas" p:state="TX" p:population="1279910"/>
+     ……
+</util:list>
+Which of the given statement is true about above code?
+1). It will create a bean of type java.util.List that contains all of the values or beans that it contains.
+2). util:list need to be replaced by list
+3). p is the namespace used to set properties of beans
+4). All of the above
+Solution :
+option [1,3] are correct
+
+13.Which of the given options are implementation of DataSource?
+1). BasicDataSource
+2). ConnectionDataSource
+3). DriverManagerDataSource
+4). PoolingDataSource
+Solution :
+option [1,3,4] are correct
+
+14.SpEL's __________ operator gives access to static methods and constants on a given class           
+1). #{}
+2). T()
+3). Type
+4). Ternary
+Solution :
+option [2] is correct
+
+15.. Which of the given annotation is used to execute spring boot application?
+1). @Configuraton
+2). @EnableAutoConfiguration
+3). @Resource
+4). @Bean
+Solution :
+option [2] is correct
+
+16. Given the code snippet below, which of the following statements are true?
+          @PersistenceContext
+    private EntityManager entityManager;
+     public void registerUser() {
+     User usr = new User(); // Line 1
+     usr.setName(“John”); // Line 2
+     entityManager.persist(usr); // Line 3
+   }           
+                                        Please choose all the answers that apply:
+1). At line 1 the user instance is a managed Entity
+2). At line 1 the user instance is a new Entity
+3). At line 1 a new record will be inserted in the user table
+4). At line 2 the entityManager will immediately reflect user name change to the database
+5). At line 3 the entityManager will immediately reflect user name change to the database
+Solution :
+option [2,5] are correct
+
+
+17.How many ways you can configure EntityManagerFactory in Spring?
+1). LocalEntityManagerFactoryBean
+2). EntityManagerFactory lookup over JNDI
+3). LocalContainerEntityManagerFactoryBean
+4). All of the above
+Solution :
+option [4] is correct
+
+18.The projection operator in SpEL is:           
+1). .?[]
+2). .![]
+3). #{}
+4). .#[]
+Solution :
+option [2] is correct
+
+19.Which of the given syntax is correct to get a unique instance of a bean each time it is asked for?
+1). <bean id=“foo” class=“com.igate.Foo” scope=“prototype” />
+2). <bean id=“foo” class=“com.igate.Foo” scope=“singleton” />
+3). <bean id=“foo” class=“com.igate.Foo” scope=“request” />
+4). <bean id=“foo” class=“com.igate.Foo” scope=“session” />
+Solution :
+option [1] is correct
+
+20.Which of the given class is configured for internationalization?
+1). CustomEditorConfigurer
+2). PropertyPlaceHolderConfigurer
+3). ResourceBundleMessageSource
+4). AspectJWeaving
+Solution :
+option [3] is correct
+
+21.Q. Classes annotated with the following annotations are scanned by Spring's <context:component-scan>.
+
+1. @Controller
+2. @BeanComponent
+3. @Service
+4. @Component
+5. @Repository
+6. @Database 
+1). 1,2,4
+2). 1,4
+3). 1,4,5
+4). 1,3,4,5
+5). 1,4,5,6
+Solution :
+option [4] is correct
+
+22.Spring’s core transaction management abstraction is based on the interface?
+1). PlatformTransaction
+2). PlatformTransactionManager
+3). TransactionManager
+4). PlatformManager
+Solution :
+option [2] is correct
+
+23.. <bean id="sessionFactory"
+class="___________________________">
+       <property name="dataSource" ref="dataSource" />
+       <property name="annotatedClasses" value="com.capgemini.entity" />
+       <property name="hibernateProperties">
+            <props>
+                   <prop key="dialect"> org.hibernate.dialect.Oracle9Dialect </prop>
+            </props>
+       </property>
+</bean>
+
+Assuming that the fully qualified class name is give, which of the following class could go into the blank?
+1). LocalSessionFactoryBean
+2). RemoteSessionFactoryBean
+3). SessionFactoryBean
+4). AnnotationSessionFactoryBean
+Solution :
+option [4] is correct
+
+24. To use repository from Sping Data, create an interface to extend following interface
+1). org.springframework.data.repository.Repository(T,ID extends Serializable>
+2). org.springframework.data.repository.Repository(ID extends Serializable,T>
+3). org.springframework.data.repository.Repository(<T >)
+4). 4) none of the above.
+Solution :
+option [1] is correct
+
+25. Spring provides a class _____________ to
+work with JPA specific transactions.
+1). org.springframework.transaction.PlatformTransactionManager
+2). org.springframework.orm.jpa.JpaTransactionManager
+3). all of the above
+4). none of the above
+Solution :
+option [2] is correct
+
+26.Classes annotated with __________ are identified as persistent classes by the annotatedClasses property of the AnnotationSessionFactoryBean.                                 
+1). @Persist
+2). @Mapping
+3). @Repository
+4). @Entity
+Solution :
+option [4] is correct
+
+27. How many ways you can acquire DataSource?
+1). DriverManagerDataSource
+2). JNDI Look upManagerDataSource
+3). all of the above
+Solution :
+option [1,2] are correct
+
+28.Given the code snippet below, which of the following statements are true?
+   @PersistenceContext
+   private EntityManager entityManager;
+   public void updateUserProfile(Long usrId) {
+   User usr = entityManager.find(User.class,usrId); // Line 1
+   usr.setName(“john”); // Line 2
+   entityManager.merge(usr); // Line 3
+   entityManager.persist(usr); // Line 4
+   }
+1). At line 1 the user instance is a managed Entity (t)
+2). At line 1 the user instance is a detached Entity
+3). At line 1 the find method will return null if the input userID is not found (t)
+4). line 3 is mandatory to synchronize the changes done at line 2 to the database
+5). ) line 4 is mandatory to synchronize the changes done at line 2 to the database
+Solution :
+option [2,5] are correct
+
+29. Container-managed and application-managed entity managers are associated with an EntityManagerFactory instance.
+1). TRUE
+2). FALSE
+Solution :
+option [1] is correct
+
+30.Which DataSource matches the following description ?                                  
+
+"You want to acquire the connection only once and hold on to it. 
+You should call the destroy() method when you are done with database processing."
+1). AbstractDataSource
+2). SingleConnectionDataSource
+3). BasicDataSource
+4). DriverManagerDataSource
+Solution :
+option [2] is correct
+
+
+
+
+30. Where do you expect to find the servlet specific Spring config to the "example" 
+servlet in the web.xml below?
+
+<servlet>
+    <servlet-name>example</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+1). /WEB-INF/example-servlet.xml
+2). /WEB-INF/servlet-config.xml
+3). /WEB-INF/default-config.xml
+4). /WEB-INF/example-servlet-config.xml
+Solution :
+option [1] is correct
+
+
+
+31.@Controller is a specialization of the @Component annotation.           
+1). TRUE
+2). FALSE
+Solution :
+option [1] is correct
+
+
+
+32.The DispatcherServlet is an implementation of what design pattern?
+1). Controller
+2). Template
+3). Front Controller
+4). Interceptor
+Solution :
+option [3] is correct
+
+
+33.Which of the following correctly describe the modules of the Spring architecture?
+1). The Context module provides a Web-based framework for integrating Spring’s IoC and DI containers through the J2EE Servlet API
+2). The Web module provide transaction management for data access business logic, utilizing AOP to inject transaction logic into domain functionality
+3). The inversion of Control(IOC) and dependency Injection (DI) contains , as well as fundamental parts of the Spring framework, are provided by the core and Beans modules.
+4). The transaction modules provides and AOP framework to utilize proxies to transparently inject any desired business logic into domain functionality.
+5). . The Aspect-Oriented Programming(AOP) modules builds on the Core and Business modules to provide the ApplicationContext infrastructure, allowing access to object in a framework style
+Solution :
+option [2,3,4] are correct
+
+
+
+
+34.JpaRepository is a child inteface of following?
+1). CrudRepository<T,ID>,
+2). PagingAndSortingRepository<T,ID>,
+3). QueryByExampleExecutor<T>,
+4). Repository<T,ID>
+5). all of the above.
+Solution :
+option [4] is correc
+
+
+
+
+35.Which statements about DispatcherServlet are true?                       
+1). It's a Model part of the MVC pattern implemented in Spring MVC.
+2). It's a View part of the MVC pattern implemented in Spring MVC.
+3). It's a Controller part of the MVC pattern implemented in Spring MVC.
+4). It's an example of the Intercepting Filter pattern implementation.
+Solution :
+option [3] is correct
+
+
+36.The request has already reached the DispatcherServlet. Given the snippet from the xml file, 
+which component will handle the request next? 
+
+<beans> 
+    <!-- basicspringController implements Controller -->
+    <bean id="basicspringController" class="training.web.spring.BasicSpringController" >
+           <!-- some properties -->
+    </bean>
+    <bean id="beanMapping" class="org.springframework.web.servlet.handler.BeanUrlHandlerMapping">
+          <!-- some properties -->
+    </bean>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+          <!-- some properties -->
+    </bean>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+           <!-- some properties -->
+     </bean>
+</beans>
+1). basicspringController
+2). beanMapping
+3). viewResolver
+4). messageSource
+Solution :
+option [2] is correct
+
+
+
+37.When Spring (MVC) is used in a web-aware way 3 additional scopes become available to bind beans to, these are?                                                                                                                            
+1). request
+2). singleton
+3). session
+4). prototype
+5). global-session
+Solution :
+option [1,3,5] are correct
+
+
+38.You want to write a JPA Entity class to model a databank table named COOPERATE_USER. Each user is
+uniquely identified in this table by his or her social security number SSN. Along with SSN the system keeps username, job, address and birth date.
+
+How to declare such JPA Entity class?
+
+  Please choose all the answers that apply:
+1). Write a CooperateUser public class
+2). Annotate the CooperateUser class with @Table(name=” COOPERATE_USER”)
+3). Annotate the CooperateUser class with @Entity
+4). The CooperateUser class must implement Serializable
+5). Define private attributes ssn, job, name, addess and birthdate
+Solution :
+option [1,2,3,4] are correct
+
+
+
+40.Given the code snippet below:
+@Controller
+public class MyClass {
+    public ModelAndView _____________(HttpServletRequest request, HttpServletResponse response) 
+    throws ServletException, IOException  {
+           String now = new java.util.Date().toString();
+            return new ModelAndView("hello","now",now);
+       }  
+}
+
+\What should be the method name?                           
+1). controlRequest
+2). handle
+3). only handleRequest
+4). any user defined method
+Solution :
+option [4] is correct
+
+
+
+
+40.Spring's ___________ sends out requests to controllers.
+1). ActionServlet
+2). ControllerServlet
+3). DispatcherServlet
+4). FilterDispatcher
+Solution :
+option [3] is correct
+
+
+41.You want to write a JPA Entity class to model a databank table named COOPERATE_USER. Each user is  uniquely identified in this table by his or her social security number SSN. Along with SSN the system keeps username, job, address and birth date.
+
+How to declare such JPA Entity class?
+
+Please choose all the answers that apply
+1). Write a CooperateUser public class
+2). Annotate the CooperateUser class with @Table(name=” COOPERATE_USER”)
+3). Annotate the CooperateUser class with @Entity
+4). Define private attributes ssn, job, name, addess and birthdate
+5). Annotate the ' name' attibute with @Id
+6). The CooperateUser class must implement Serializable
+Solution :
+option [1,2,3,6] are correct
+
+
+42.Look at a snippet from web.xml of a Spring MVC application:
+
+<web-app>
+     <servlet>
+          <servlet-name>tradingapp</servlet-name>
+          <servlet-class> org.springframework.web.servlet.DispatcherServlet </servlet-class>
+     </servlet>
+     <servlet-mapping>
+          <servlet-name>tradingapp</servlet-name>
+          <url-pattern>*.htm</url-pattern>
+     </servlet-mapping>
+
+43.What should be the name of the Spring configuration file for this application?           
+1). tradingapp.xml
+2). spring-config.xml
+3). tradingapp-servlet.xml
+4). Any name is ok
+Solution :
+option [3] is correct
+
+
+
+
+44.The Controller Interface's handleRequest() method returns a?
+1). ModelAndView object
+2). JSP page
+3). View object
+4). Form object
+Solution :
+option [1] is correct
+
+
+45.Given the code snippet below, which of the following statements are true?
+          @PersistenceContext
+    private EntityManager entityManager;
+     public void registerUser() {
+     User usr = new User(); // Line 1
+     usr.setName(“John”); // Line 2
+     entityManager.persist(usr); // Line 3
+   }           
+Please choose all the answers that apply:
+1). At line 1 the user instance is a managed Entity
+2). At line 1 the user instance is a new Entity
+3). At line 1 a new record will be inserted in the user table
+4). At line 2 the entityManager will immediately reflect user name change to
+5). At line 3 the entityManager will immediately reflect user name change to
+Solution :
+option [2,5] are correct
+
+
+46.To figure out which controller should handle the request, DispatcherServlet queries ___________ .
+1). HandlerMappings
+2). ModelAndView
+3). ViewResolver
+4). RequestHandler
+Solution :
+option [1] is correct
+
+
+
+47.How will you bring in the configuration metadata into a Spring testcase?                  
+1). @TransactionConfiguration
+2). @ContextConfiguration
+3). @RunWith
+4). @ContextMetadata
+Solution :
+option [2] is correct
+
+
+
+48. In Spring MVC, the _____________  tag can render field validation errors.
+1). <sf:fieldErrors>
+2). <sf:errors>
+3). <sf:error>
+4). <sf:errorMessages>
+Solution :
+option [2] is correct
+
+
+
+49._________ manages a TestContext.                     
+1). ContextManager
+2). TestContextManager
+3). TestExecutionListener
+4). TestContextClass
+Solution :
+option [2] is correct
+
+
+
+
+50.. Consider the code snippet below for addUser.jsp in a MVC web-application:
+
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
+<h2>Create a User</h2>
+<sf:form method="GET" modelAttribute="user" action="ProcessUser.obj" >
+….
+<sf:input  _________="username" size="15" maxlength="15" />
+.....
+
+Most form elements from spring-form.tld have an attribute that is used to connect form 
+input field with the corresponding field in the command object? Which is this element 
+that must replace the blank?                                                                 
+1). commandPath
+2). command
+3). path
+4). bind
+Solution :
+option [3] is correct
